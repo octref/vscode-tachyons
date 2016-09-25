@@ -1,14 +1,8 @@
 # Tachyons in VSCode
 
-### Goto definition
+### Goto & Peek definition
 
-![]()
-
-### Peek definition
+![](tachyons.gif)
 
 ## License
 MIT
-
-
-
-
