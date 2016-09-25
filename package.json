@@ -1,9 +1,21 @@
 {
-  "name": "vscode-tachyons",
-  "displayName": "vscode-tachyons",
-  "description": "",
-  "version": "0.0.1",
+  "name": "tachyons",
+  "displayName": "Tachyons",
+  "description": "Goto and peek definition for tachyons",
+  "version": "0.1.0",
   "publisher": "octref",
+  "license": "MIT",
+  "keywords": [
+    "tachyons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octref/vscode-tachyons.git"
+  },
+  "homepage": "https://github.com/octref/vscode-tachyons",
+  "bugs": {
+    "url": "https://github.com/octref/vscode-tachyons/issues"
+  },
   "engines": {
     "vscode": "^1.0.0"
   },
