@@ -9,11 +9,11 @@ import * as _  from 'lodash';
 
 export function activate(context: vscode.ExtensionContext) {
   const rootPath = vscode.workspace.rootPath;
-  const tachyonsPath = path.join(rootPath, 'node_modules/tachyons/css/tachyons.css');
+  let tachyonsPath = path.join(rootPath, 'node_modules/tachyons/css/tachyons.css');
 
   fs.stat(tachyonsPath, (err) => {
     if (err) {
-      return;
+      tachyonsPath = context.asAbsolutePath('tachyons.css');
     }
 
     const provider = new TachyonsDefinitionProvider(tachyonsPath);
