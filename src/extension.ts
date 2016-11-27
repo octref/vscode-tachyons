@@ -22,10 +22,6 @@ export function activate(context: vscode.ExtensionContext) {
   });
 }
 
-export function deactivate() {
-
-}
-
 class TachyonsDefinitionProvider implements DefinitionProvider {
   private _tachyonsUri: Uri;
   private _definitionMap: Map<string, Definition>;
@@ -67,21 +63,7 @@ class TachyonsDefinitionProvider implements DefinitionProvider {
       return;
     }
 
-    // Ensure the current word is html attributes enclosed by quote
     const currWord = document.getText(currWordRange);
-    if (!_.startsWith(currWord, `"`) && !_.startsWith(currWord, `'`)) {
-      return;
-    }
-
-    // If cursor is before beginning quote or after trailing quote, provide nothing
-    if (position.character === currWordRange.start.character || position.character === currWordRange.end.character) {
-      return;
-    }
-
-    // Ensure the current word is a class attr
-    if (!this.isClassAttr(document, currWordRange.start)) {
-      return;
-    }
 
     const classAtPosition = '.' + this.getClassAtPosition(document, position, currWordRange, currWord);
     if (this._definitionMap.has(classAtPosition)) {
@@ -101,11 +83,5 @@ class TachyonsDefinitionProvider implements DefinitionProvider {
       startOffset += 1 + c.length;
       return positionOffset <= startOffset;
     });
-  }
-
-  private isClassAttr(document: TextDocument, start: Position) {
-    var classAttrPosition = new Position(start.line, start.character - 2);
-    const classWordRange = document.getWordRangeAtPosition(classAttrPosition);
-    return classWordRange && document.getText(classWordRange) === 'class';
   }
 }

@@ -1,15 +1,16 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "outDir": "out",
-        "noLib": true,
-        "sourceMap": true,
-        "rootDir": "."
-    },
-    "exclude": [
-        "node_modules",
-        ".vscode-test"
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "out",
+    "lib": [
+      "es6"
     ],
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "sourceMap": true,
+    "rootDir": "."
+  },
+  "exclude": [
+    "node_modules",
+    ".vscode-test"
+  ]
 }
