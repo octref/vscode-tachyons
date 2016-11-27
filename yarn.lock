@@ -1797,10 +1797,6 @@ supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-tachyons@^4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.5.5.tgz#8b1bde4a2659f4e17ff15ee5c313879a4236c818"
-
 tar@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tar/-/tar-1.0.3.tgz#15bcdab244fa4add44e4244a0176edb8aa9a2b44"
