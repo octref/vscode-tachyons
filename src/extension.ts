@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const provider = new TachyonsDefinitionProvider(tachyonsPath);
 
-    vscode.languages.registerDefinitionProvider('html', provider);
+    vscode.languages.registerDefinitionProvider(['html', 'javascript'], provider);
   });
 }
 
