@@ -2,7 +2,7 @@
   "name": "tachyons",
   "displayName": "Tachyons",
   "description": "Goto and peek definition for tachyons",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "octref",
   "license": "MIT",
   "keywords": [
