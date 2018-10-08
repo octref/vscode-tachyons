@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const provider = new TachyonsDefinitionProvider(tachyonsPath);
 
-    vscode.languages.registerDefinitionProvider(['html', 'javascript'], provider);
+    vscode.languages.registerDefinitionProvider(['html', 'javascript', 'vue'], provider);
   });
 }
 
@@ -56,7 +56,8 @@ class TachyonsDefinitionProvider implements DefinitionProvider {
   }
 
   provideDefinition(document: TextDocument, position: Position, token: CancellationToken): Definition {
-    const currWordRange = document.getWordRangeAtPosition(position);
+    // @ts-ignore: regexp is optional, but missing in typings
+    const currWordRange = document.getWordRangeAtPosition(position, /[a-zA-Z0-9-]+/);
 
     // Ensure the current word is valid
     if (!currWordRange) {
