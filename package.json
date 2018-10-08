@@ -23,7 +23,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:html"
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:vue"
   ],
   "main": "./out/src/extension",
   "contributes": {},
