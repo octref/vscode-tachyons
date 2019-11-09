@@ -23,7 +23,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:html"
+    "onLanguage:html",
+    "onLanguage:svelte"
   ],
   "main": "./out/src/extension",
   "contributes": {},
